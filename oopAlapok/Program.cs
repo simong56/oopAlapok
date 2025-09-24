@@ -11,14 +11,32 @@ namespace oopAlapok
         public string _nev;
         public int _eletkor;
 
-        public Szemely(string nev, int kor)
+        public Szemely(string nev)
         {
             _nev = nev;
-            _eletkor = kor;
         }
-        public string kiiratas()
+
+        public string nev
         {
-            return _nev + _eletkor;
+            get { return _nev; }
+            //set { _nev = value; }
+        }
+
+        public int eletkor
+        {
+            get { return _eletkor; }
+            set
+            {
+            if(value>=0) 
+                {
+                    _eletkor = value;
+                }
+            else
+                {
+                    Console.WriteLine("Hibás érték");
+                }
+            }
+            
         }
 
     }
@@ -27,8 +45,9 @@ namespace oopAlapok
     {
         static void Main(string[] args)
         {
-            Szemely tanulo1 = new Szemely("Jozsi", 23);
-            Console.WriteLine(tanulo1.kiiratas());
+            Szemely tanulo1 = new Szemely("Jozsi");
+            tanulo1.eletkor = 40;
+            Console.WriteLine(tanulo1.nev + tanulo1.eletkor);
         }
     }
 }
