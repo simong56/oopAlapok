@@ -8,17 +8,27 @@ namespace oopAlapok
 {
     public class Szemely
     {
-        public string _nev = "Nagy Jozsef";
-        public int _eletkor = 90;
+        public string _nev;
+        public int _eletkor;
+
+        public Szemely(string nev, int kor)
+        {
+            _nev = nev;
+            _eletkor = kor;
+        }
+        public string kiiratas()
+        {
+            return _nev + _eletkor;
+        }
 
     }
+
     internal class Program
     {
         static void Main(string[] args)
         {
-            Szemely tanulo1 = new Szemely();
-            Console.WriteLine(tanulo1._nev);
-            Console.WriteLine(tanulo1._eletkor);
+            Szemely tanulo1 = new Szemely("Jozsi", 23);
+            Console.WriteLine(tanulo1.kiiratas());
         }
     }
 }

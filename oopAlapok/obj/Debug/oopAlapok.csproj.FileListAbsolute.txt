@@ -1,0 +1,7 @@
+C:\Users\simonga\Desktop\oop\oopAlapok\oopAlapok\bin\Debug\oopAlapok.exe.config
+C:\Users\simonga\Desktop\oop\oopAlapok\oopAlapok\bin\Debug\oopAlapok.exe
+C:\Users\simonga\Desktop\oop\oopAlapok\oopAlapok\bin\Debug\oopAlapok.pdb
+C:\Users\simonga\Desktop\oop\oopAlapok\oopAlapok\obj\Debug\oopAlapok.csproj.AssemblyReference.cache
+C:\Users\simonga\Desktop\oop\oopAlapok\oopAlapok\obj\Debug\oopAlapok.csproj.CoreCompileInputs.cache
+C:\Users\simonga\Desktop\oop\oopAlapok\oopAlapok\obj\Debug\oopAlapok.exe
+C:\Users\simonga\Desktop\oop\oopAlapok\oopAlapok\obj\Debug\oopAlapok.pdb
