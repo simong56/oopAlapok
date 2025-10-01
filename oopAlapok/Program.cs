@@ -76,6 +76,20 @@ namespace oopAlapok
         }
     }
 
+    class Dolgozo : Szemely
+    {
+        private int _ber;
+        public Dolgozo(string nev, int kor, int ber) : base(nev, kor)
+        {
+            _ber = ber;
+        }
+        public override string ToString()
+        {
+            return $"{nev}, {eletkor}, {_ber}";
+        }
+
+    }
+
     class Hallgato : Szemely
     {
         private string _neptunkod;
@@ -123,6 +137,8 @@ namespace oopAlapok
             {
                 Console.WriteLine(item);
             }
+            Dolgozo dolgozo1 = new Dolgozo("olivér", 45, 350000);
+            Console.WriteLine(dolgozo1);
         }
     }
 }
