@@ -46,6 +46,19 @@ namespace oopAlapok
 
     }
 
+    class Bankszamla
+    {
+        private int egyenleg;
+        public void Betesz()
+        {
+
+        }
+        public void Kivesz()
+        {
+            
+        }
+    }
+
     internal class Program
     {
         static void Main(string[] args)
