@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace oopAlapok
 {
@@ -78,7 +79,18 @@ namespace oopAlapok
     class Hallgato : Szemely
     {
         private string _neptunkod;
+        public string Neptunkod
+        {
+            set 
+            { 
+                if (value.Length == 6)
+                    { _neptunkod = value; } 
+            }
+        }
+        public Hallgato(string nev, int kor) : base(nev, kor)
+        {
 
+        }
     }
 
     internal class Program
@@ -89,6 +101,28 @@ namespace oopAlapok
 
             Console.WriteLine(tanulo1);
             //Console.WriteLine(tanulo1.nev + tanulo1.eletkor);
+
+            List<Hallgato> hallgatoLista = new List<Hallgato>();
+
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine($"Kérem az {i + 1}. tanuló nevét!");
+                string nev = Console.ReadLine();
+                Console.WriteLine($"Kérem az {i + 1}. tanuló életkorát!");
+                int eletkor = int.Parse(Console.ReadLine());
+                Hallgato tanulo = new Hallgato(nev, eletkor);
+
+                Console.WriteLine($"Kérem az {i + 1}. tanuló neptunkódját!");
+                string neptunkod = Console.ReadLine();
+                tanulo.Neptunkod = neptunkod;
+
+                hallgatoLista.Add(tanulo);
+            }
+            Console.WriteLine();
+            foreach (var item in hallgatoLista)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
