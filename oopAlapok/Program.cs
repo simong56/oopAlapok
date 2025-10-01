@@ -8,12 +8,13 @@ namespace oopAlapok
 {
     public class Szemely
     {
-        public string _nev;
-        public int _eletkor;
+        protected string _nev;
+        protected int _eletkor;
 
-        public Szemely(string nev)
+        public Szemely(string nev, int kor)
         {
             _nev = nev;
+            _eletkor = kor;
         }
 
         public string nev
@@ -48,7 +49,22 @@ namespace oopAlapok
 
     class Bankszamla
     {
-        private int egyenleg;
+        private int _egyenleg;
+        public int Egyenleg
+        {
+            set
+            {
+                if (value >= 0) 
+                {                     
+                    _egyenleg = value;
+                }
+                else
+                {
+                    Console.WriteLine("Az egyenleg nem lehet kisebb 0-nál");
+                }
+            }
+        }
+
         public void Betesz()
         {
 
@@ -59,12 +75,17 @@ namespace oopAlapok
         }
     }
 
+    class Hallgato : Szemely
+    {
+        private string _neptunkod;
+
+    }
+
     internal class Program
     {
         static void Main(string[] args)
         {
-            Szemely tanulo1 = new Szemely("Jozsi");
-            tanulo1.eletkor = 72;
+            Szemely tanulo1 = new Szemely("Jozsi", 98);
 
             Console.WriteLine(tanulo1);
             //Console.WriteLine(tanulo1.nev + tanulo1.eletkor);
